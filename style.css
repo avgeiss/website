@@ -6,7 +6,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
-p{
+p.read{
 	font-family: 'PT Serif', serif;
 	font-size: 20px;
 }
@@ -101,4 +101,35 @@ div.citation{
 }
 div.citation:hover{
 	background-color: #CEE5CC;
+}
+
+
+div.conf, div.conf_nolink{
+	font: 11pt Arial;
+	height: 40px;
+	width: 660px;
+	margin-bottom:10px;
+}
+div.conf:hover{
+	background-color: #CEE5CC;
+}
+div.date{
+	float: left;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	vertical-align: middle;
+}
+div.presentation{
+	float: left;
+	width: 560px;
+	padding-top: 5px;
+}
+div.footnote{
+	font: 8pt Arial;
+	font-style: italic;
+	height: 10px;
+	width: 660px;
+	text-align: center;
 }
