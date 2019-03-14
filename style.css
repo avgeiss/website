@@ -1,5 +1,5 @@
 body {
-	background-color: #E4FDE1;
+	background-color: #ECFCEA;
 	font: 12pt Arial;
 	padding: 0px;
 	margin: 0px;
@@ -23,9 +23,6 @@ div.container {
 div.header {
 	position: relative;
 	height: 220px;
-	margin-bottom: 30px;
-	box-shadow: 2px 3px 5px #000000;
-	background-color: #97A895;
 }
 img.headshot {
 	position: absolute;
@@ -43,6 +40,15 @@ div.title {
 	height: 100px;
 	text-align: center;
 	font: 12pt Arial;
+}
+div.header_background{
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	width: 1000px;
+	height:120px;
+	box-shadow: 2px 3px 5px #000000;
+	background-color: #97A895;
 }
 h1 {
 	font-family: 'Lato', sans-serif;
@@ -84,6 +90,10 @@ a, a:visited {
 a, a:visited {
 	color: #000000;
 	text-decoration: none;
+}
+a.inline, a.inline:visited{
+	color: #434F42;
+	font-weight: bold;
 }
 div.nav{
 	width: auto;
@@ -132,4 +142,10 @@ div.footnote{
 	height: 10px;
 	width: 660px;
 	text-align: center;
+}
+div.blurb{
+	width: 660px;
+	margin-bottom: 40px;
+	font-family: 'PT Serif', serif;
+	font-size: 20px;
 }
