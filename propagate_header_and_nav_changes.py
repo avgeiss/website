@@ -11,7 +11,7 @@ Created on Tue Mar 12 01:35:07 2019
 #aren't index.html. If there is no such tag no changes are made.
 
 from glob import glob
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 
 
 #get the html for the index page:

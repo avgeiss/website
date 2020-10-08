@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <title>Andrew Geiss</title>
-<link href="https://fonts.googleapis.com/css?family=Cinzel|Lato|PT+Serif|Abel" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link href="https://fonts.googleapis.com/css?family=Cinzel|Lato|PT+Serif|Abel" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<img class="banner" src="./images/banner-large.jpg" alt="OLYMPEX DOW" />
+<img alt="OLYMPEX DOW" class="banner" src="./images/banner-large.jpg"/>
 <div class="container">
 <div class="header">
 <div class="header_background"></div>
-<img class="headshot" src="./images/headshot.jpg" alt="Andrew Geiss Headshot" />
+<img alt="Andrew Geiss Headshot" class="headshot" src="./images/headshot.jpg"/>
 <div class="title">
 <h1>Andrew Geiss</h1>
-<a href="http://atmos.uw.edu">University of Washington, Department of Atmospheric Sciences</a>
+<a href="https://www.pnnl.gov/atmospheric/">Pacific Northwest National Laboratory, Atmospheric Sciences and Global Change Division</a>
 </div>
 </div>
 <div class="body">
@@ -26,33 +25,39 @@
 </div>
 <div class="content">
 <h2>Current Research:</h2>
+
 <p class="read">
-<b>Cloud Climate Interaction:</b><br />
-Clouds play a crucial role in Earth’s radiation budget, and thus are an important factor in determining the climate. Cloud responses to climate change and internal sources of climate variability (such as the southern annular mode or El Nino) are poorly understood however, and climate models struggle to reproduce observed cloud climatology and variability. I am using long duration cloud datasets from several satellite instruments (MISR, MODIS, CERES) to catalog how clouds change in response to climate variability, and comparing the results to clouds simulated in climate models; with the goals of evaluating the performance of the models and gaining insight in to how clouds might be altered in a changing climate. 
+<b>Radar Data Inpainting:</b><br/>
+Weather radars are susceptible to a number of failure modes and physical limitations that can cause large blind regions where data is not collected. I am using deep convolutional neural networks to infill missing data regions for several different types of DOE ARM research radars using neighboring information about reflectivity, doppler velocity, and spectrum width. This can be done using two training strategies: one that optimizes the mean squared pixel error of the output, and one that optimizes both mean squared error and adversarial loss using a conditional generative adversarial network. The adversarial training approach produces results that contain realistic small-scale variability while successfully extending large-scale structures into the missing data region.
 </p>
 <p class="read">
-<b>Radar Super-Resolution:</b><br />
+<b>Radar Super-Resolution:</b><br/>
 Image super resolution involves artificially increasing the resolution of an image based only on the information contained in the original. The simplest techniques are interpolation schemes which estimate subpixel scale information from only the neighboring pixels in the original image. I am applying state-of-the-art convolutional neural network (CNN) based super resolution schemes to NEXRAD PPI scans. By learning common subpixel scale precipitation features in the context of large-scale weather features, a neural network can significantly outperform interpolation schemes.
-</p>
-<p class="read">
-<b>Cloud Responses to Sea Surface Temperature Reemergence:</b><br />
-Subtropical marine stratocumulus cloud amount is strongly linked to the ocean surface temperature and has a strong shortwave radiative effect. In the extratropics Sea Surface Temperature (SST) undergoes a “reemergence:” SSTs are correlated between successive winter seasons, but decorrelate during the summer due to the seasonal cycle of ocean mixed layer depth. We have examined the global distribution of winter to winter SST reemergence and the impact of SST on cloud amount using satellite data and identified a region in the northeastern Pacific Ocean where wintertime SSTs are correlated with the occurrence of marine stratiform cloud the following winter. Exploration of this relationship may provide insight into SST – low-cloud feedbacks.
-</p>
-<p class="read">
-<b>Indian Summer Monsoon and Indian Ocean ITCZ Variability:</b><br />
-The Inter-Tropical Convergence Zone (ITCZ) is a persistent band of organized convection in the tropics which arises due to the surface convergence of the Hadley cells. The ITCZ moves north and south across the equator with the seasons, and during the summer moves north over India and the Bay of Bengal, affecting the Indian summer monsoon. Occasionally a second parallel band of convection forms, referred to as a double-ITCZ. The existence of double ITCZs over the tropical Indian Ocean is well documented, but the underlying mechanism is poorly understood. We have developed an algorithm to identify this phenomenon in satellite data and create a thirty-year record of double-ITCZ occurrence, and are using this record to investigate linkages between summer-time double-ITCZ occurrence and intra-seasonal variability in the Indian summer monsoon.
 </p>
 <h2>Past Research:</h2>
 <p class="read">
-<b>Shallow Cold Pools in the Atmospheric Boundary Layer:</b><br />
+<b>Cloud Climate Interaction:</b><br/>
+Clouds play a crucial role in Earth’s radiation budget, and thus are an important factor in determining the climate. Cloud responses to climate change and internal sources of climate variability (such as the southern annular mode or El Nino) are poorly understood however, and climate models struggle to reproduce observed cloud climatology and variability. I am using long duration cloud datasets from several satellite instruments (MISR, MODIS, CERES) to catalog how clouds change in response to climate variability, and comparing the results to clouds simulated in climate models; with the goals of evaluating the performance of the models and gaining insight in to how clouds might be altered in a changing climate. 
+</p>
+<p class="read">
+<b>Cloud Responses to Sea Surface Temperature Reemergence:</b><br/>
+Subtropical marine stratocumulus cloud amount is strongly linked to the ocean surface temperature and has a strong shortwave radiative effect. In the extratropics Sea Surface Temperature (SST) undergoes a “reemergence:” SSTs are correlated between successive winter seasons, but decorrelate during the summer due to the seasonal cycle of ocean mixed layer depth. We have examined the global distribution of winter to winter SST reemergence and the impact of SST on cloud amount using satellite data and identified a region in the northeastern Pacific Ocean where wintertime SSTs are correlated with the occurrence of marine stratiform cloud the following winter. Exploration of this relationship may provide insight into SST – low-cloud feedbacks.
+</p>
+<p class="read">
+<b>Indian Summer Monsoon and Indian Ocean ITCZ Variability:</b><br/>
+The Inter-Tropical Convergence Zone (ITCZ) is a persistent band of organized convection in the tropics which arises due to the surface convergence of the Hadley cells. The ITCZ moves north and south across the equator with the seasons, and during the summer moves north over India and the Bay of Bengal, affecting the Indian summer monsoon. Occasionally a second parallel band of convection forms, referred to as a double-ITCZ. The existence of double ITCZs over the tropical Indian Ocean is well documented, but the underlying mechanism is poorly understood. We have developed an algorithm to identify this phenomenon in satellite data and create a thirty-year record of double-ITCZ occurrence, and are using this record to investigate linkages between summer-time double-ITCZ occurrence and intra-seasonal variability in the Indian summer monsoon.
+</p>
+<p class="read">
+<b>Shallow Cold Pools in the Atmospheric Boundary Layer:</b><br/>
 This study involved analysis of the nighttime development of cold pools and circulation associated with a small region of gentle terrain in north-east Colorado. We used a network of sonic anemometers to measure wind vectors in a small 270-m wide and 12-m deep valley with a down-valley slope of 2–3%. We found that singular value decomposition can be used to identify cold pool development and down-valley drainage despite the strong effect of the large scale flow and the relatively weak slope of the valley, and explored the structure of cold pools that form under these conditions.
 </p>
 <p class="read">
-<b>Sea Ice Growth in Active Leads:</b><br />
+<b>Sea Ice Growth in Active Leads:</b><br/>
 We developed a simple computer model to simulate ice growth within arctic sea ice leads based on GPS data from buoys deployed on the sea ice north of Alaska.
 </p>
 </div>
 </div>
 </div>
-</body>
-</html>
+
+
+</body></html>
