@@ -1,57 +1,425 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <title>Andrew Geiss</title>
-<link href="https://fonts.googleapis.com/css?family=Cinzel|Lato|PT+Serif|Abel" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://fonts.googleapis.com/css?family=Lato|PT+Serif|Abel" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
-<img alt="OLYMPEX DOW" class="banner" src="./images/banner-large.jpg"/>
+<body id="top">
 <div class="container">
 <div class="header">
 <div class="header_background"></div>
 <img alt="Andrew Geiss Headshot" class="headshot" src="./images/headshot.jpg"/>
 <div class="title">
 <h1>Andrew Geiss</h1>
-<a href="https://www.pnnl.gov/atmospheric/">Pacific Northwest National Laboratory, Atmospheric Sciences and Global Change Division</a>
+<p class="role">Data Scientist</p>
+<a href="https://www.pnnl.gov/atmospheric/">Pacific Northwest National Laboratory</a>
+<p class="division">Atmospheric Climate and Earth Sciences Division</p>
+<nav class="header_nav" aria-label="Section navigation">
+<a class="header_nav_link" href="#about">About</a>
+<a class="header_nav_link" href="#current-research">Research</a>
+<a class="header_nav_link" href="#publications">Publications</a>
+<a class="header_nav_link" href="#conferences">Conferences</a>
+<a class="header_nav_link" href="#education">CV</a>
+</nav>
 </div>
 </div>
 <div class="body">
-<div class="navigation">
-<a class="nav" href="index.html"><div class="nav">Home</div></a>
-<a class="nav" href="cv.html"><div class="nav">Publications &amp; CV</div></a>
-<a class="nav" href="conferences.html"><div class="nav">Conferences</div></a>
-<a class="nav" href="research.html"><div class="nav">Research</div></a>
-<a class="nav" href="https://github.com/avgeiss"><div class="nav">Github</div></a>
-<!--&lt;a class="nav" href="projects.html"&gt;&lt;div class="nav"&gt;Projects/Blog&lt;/div&gt;&lt;/a&gt;-->
-</div>
 <div class="content">
-<h2>About Me</h2>
+<div class="section-card tone-1">
+<h2 id="about">About Me</h2>
 <p class="read">
 I am a data scientist in the <a class="inline" href="https://www.pnnl.gov/atmospheric/">Atmospheric Sciences and Global Change Division</a> at Pacific Northwest National Laboratory in Richland WA. My primary research involves AI and machine learning applications in atmospheric science. Other areas of interest include climate science and cloud-climate interaction, tropical atmospheric dynamics, atmospheric boundary layer dynamics, satellite remote sensing, and image processing/computer vision.
 </p>
-<!--
-<h2>Recent</h2>
+<div class="connect-row" aria-label="Professional links">
+<div class="connect-heading">
+<span class="connect-email">Contact: andrew.geiss@pnnl.gov</span>
+</div>
+<a class="connect-link" href="https://github.com/avgeiss" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="connect-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="connect-link" href="https://zenodo.org" target="_blank" rel="noopener noreferrer">Zenodo</a>
+<a class="connect-link" href="https://orcid.org" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a class="connect-link" href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+</div>
+</div>
+
+
+<div class="section-card tone-2">
+<h2 id="current-research">Current Research</h2>
+
 <p class="read">
-
-<strong>6 May 2021:</strong><br/>A preprint is now available for our recent work on radar inpainting. We use deep learning and generative adversarial networks to fill-in regions of damaged or missing radar data. <br/>
-<a href="https://amt.copernicus.org/preprints/amt-2021-100/" target="_blank"></a></p><div class="citation"><a href="https://amt.copernicus.org/preprints/amt-2021-100/" target="_blank">Geiss, A. and Hardin, J. C. (2021) Inpainting Radar Missing Data Regions with Deep Learning. <i>Atmospheric Measurement Techniques Discussion</i>, (preprint - in review), https://doi.org/10.5194/amt-2021-100</a></div>
-<p></p>
-
+<b>Radar Data Inpainting:</b><br/>
+Weather radars are susceptible to a number of failure modes and physical limitations that can cause large blind regions where data is not collected. I am using deep convolutional neural networks to infill missing data regions for several different types of DOE ARM research radars using neighboring information about reflectivity, doppler velocity, and spectrum width. This can be done using two training strategies: one that optimizes the mean squared pixel error of the output, and one that optimizes both mean squared error and adversarial loss using a conditional generative adversarial network. The adversarial training approach produces results that contain realistic small-scale variability while successfully extending large-scale structures into the missing data region.
+</p>
 <p class="read">
-<strong>1 Dec 2020:</strong><br/>In this recent paper we use deep convolutional neural networks to enhance the resolution of radar data. This work was featured as a paper of note in the <a class="inline" href="https://journals.ametsoc.org/view/journals/bams/102/2/bams.102.issue-2.xml">Februaury 2021 issue of BAMS.</a> <br/>
-<a href="https://journals.ametsoc.org/view/journals/atot/37/12/jtech-d-20-0074.1.xml" target="_blank"></a></p><div class="citation"><a href="https://journals.ametsoc.org/view/journals/atot/37/12/jtech-d-20-0074.1.xml" target="_blank">Geiss, A. and Hardin, J. C. (2020) Radar Super Resolution using a Deep Convolutional Neural Network. <i>Journal of Atmospheric and Oceanic Technology</i>, 37-12: 2197-2207, https://doi.org/10.1175/JTECH-D-20-0074.1</a></div>
-<p></p>
+<b>Radar Super-Resolution:</b><br/>
+Image super resolution involves artificially increasing the resolution of an image based only on the information contained in the original. The simplest techniques are interpolation schemes which estimate subpixel scale information from only the neighboring pixels in the original image. I am applying state-of-the-art convolutional neural network (CNN) based super resolution schemes to NEXRAD PPI scans. By learning common subpixel scale precipitation features in the context of large-scale weather features, a neural network can significantly outperform interpolation schemes.
+</p>
+</div>
+
+<div class="section-card tone-5">
+<h2 id="publications">Peer Reviewed Publications</h2>
+<p class="pub-section-hint">Click a publication to expand and view the abstract and DOI</p>
 
 
-<p class="read">
-<strong>11 Nov 2020:</strong><br/>
-A preprint is available on arXiv of our recent work on physically consistent deep-learning-based super resolution. Here, we develop a method to ensure that physical conservation laws are strictly enforced when using a CNN for super resolution. <br/>
-<a href="https://arxiv.org/abs/2011.05586" target="_blank"></a></p><div class="citation"><a href="https://arxiv.org/abs/2011.05586" target="_blank">Geiss, A. and Hardin, J. C. (2020) Invertible CNN-Based Super Resolution with Downsampling Awareness. <i>arXiv</i>, (preprint - in review), https://arxiv.org/abs/2011.05586</a></div>
-<p></p>
+<!-- #TEMPLATE FOR ADDING PUBLICATIONS:
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Title</span>
+<span class="pub-authors">Authors</span>
+<span class="pub-meta">Year · Journal</span>
+</summary>
+<div class="pub-details">
+<p>Abstract</p>
+<a class="pub-doi" href="" rel="noopener noreferrer" target="_blank">DOI: </a>
+</div>
+</details>
+</div>
 -->
+
+<div class="pub-group">
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Self-Supervised Cloud Classification</span>
+<span class="pub-authors">Geiss, A., M. W. Christensen, A. C. Varble, T. Yuan, and H. Song</span>
+<span class="pub-meta">2024 · Artif. Intell. Earth Syst.</span>
+</summary>
+<div class="pub-details">
+<p>Low-level marine clouds play a pivotal role in Earth’s weather and climate through their interactions with radiation, heat and moisture transport, and the hydrological cycle. These interactions depend on a range of dynamical and microphysical processes that result in a broad diversity of cloud types and spatial structures, and a comprehensive understanding of cloud morphology is critical for continued improvement of our atmospheric modeling and prediction capabilities moving forward. Deep learning has recently accelerated our ability to study clouds using satellite remote sensing, and machine learning classifiers have enabled detailed studies of cloud morphology. A major limitation of deep learning approaches to this problem, however, is the large number of hand-labeled samples that are required for training. This work applies a recently developed self-supervised learning scheme to train a deep convolutional neural network (CNN) to map marine cloud imagery to vector embeddings that capture information about mesoscale cloud morphology and can be used for satellite image classification. The model is evaluated against existing cloud classification datasets and several use cases are demonstrated, including training cloud classifiers with very few labeled samples, interrogation of the CNN’s learned internal feature representations, cross-instrument application, and resilience against sensor calibration drift and changing scene brightness. The self-supervised approach learns meaningful internal representations of cloud structures and achieves comparable classification accuracy to supervised deep learning methods without the expense of creating large hand-annotated training datasets.</p>
+<a class="pub-doi" href="https://doi.org/10.1175/AIES-D-23-0036.1" rel="noopener noreferrer" target="_blank">DOI: 10.1175/AIES-D-23-0036.1</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Emulating Aerosol Optics with Randomly Generated Neural Networks</span>
+<span class="pub-authors">Geiss, A., Ma, P.-L., Singh, B., and Hardin, J. C.</span>
+<span class="pub-meta">2022 · EGUsphere</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://doi.org/10.5194/egusphere-2022-559" rel="noopener noreferrer" target="_blank">DOI: 10.5194/egusphere-2022-559</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Downscaling Atmospheric Chemistry Simulations with Physically Consistent Deep Learning</span>
+<span class="pub-authors">Geiss, A., Silva, S., and Hardin, J.</span>
+<span class="pub-meta">2022 · Geosci. Model Dev. Discuss.</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://doi.org/10.5194/gmd-2022-76" rel="noopener noreferrer" target="_blank">DOI: 10.5194/gmd-2022-76</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Inpainting radar missing data regions with deep learning</span>
+<span class="pub-authors">Geiss, A. and Hardin, J. C.</span>
+<span class="pub-meta">2021 · Atmos. Meas. Tech.</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://doi.org/10.5194/amt-14-7729-2021" rel="noopener noreferrer" target="_blank">DOI: 10.5194/amt-14-7729-2021</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Strict Enforcement of Conservation Laws and Invertibility in CNN-Based Super Resolution for Scientific Datasets</span>
+<span class="pub-authors">Geiss, A. and Hardin, J. C.</span>
+<span class="pub-meta">2020 · arXiv</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://arxiv.org/abs/2011.05586" rel="noopener noreferrer" target="_blank">Link: arXiv</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Radar Super Resolution using a Deep Convolutional Neural Network</span>
+<span class="pub-authors">Geiss, A. and Hardin, J. C.</span>
+<span class="pub-meta">2020 · Journal of Atmospheric and Oceanic Technology</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://doi.org/10.1175/JTECH-D-20-0074.1" rel="noopener noreferrer" target="_blank">DOI: 10.1175/JTECH-D-20-0074.1</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">The Influence of Sea Surface Temperature Reemergence on Marine Stratiform Cloud</span>
+<span class="pub-authors">Geiss, A., Marchand, R., and Thompson, L.</span>
+<span class="pub-meta">2020 · Geophysical Research Letters</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://doi.org/10.1029/2020GL086957" rel="noopener noreferrer" target="_blank">DOI: 10.1029/2020GL086957</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Cloud responses to climate variability over the extratropical oceans as observed by MISR and MODIS</span>
+<span class="pub-authors">Geiss, A. and Marchand, R.</span>
+<span class="pub-meta">2019 · Atmospheric Chemistry and Physics</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://doi.org/10.5194/acp-19-7547-2019" rel="noopener noreferrer" target="_blank">DOI: 10.5194/acp-19-7547-2019</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Decomposition of Spatial Structure of Nocturnal Flow over Gentle Terrain</span>
+<span class="pub-authors">Geiss, A., and Mahrt, L.</span>
+<span class="pub-meta">2015 · Boundary Layer Meteorology</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://doi.org/10.1007/s10546-015-0043-7" rel="noopener noreferrer" target="_blank">DOI: 10.1007/s10546-015-0043-7</a>
+</div>
+</details>
+</div>
+
+</div>
+
+<details class="pub-more">
+<summary><span class="pub-more-label-closed">view more</span><span class="pub-more-label-open">view less</span></summary>
+
+<div class="pub-more-content">
+
+<div class="pub-group">
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">The use of automated feature extraction for diagnosing double inter-tropical convergence zones</span>
+<span class="pub-authors">Geiss, A., and Levy, G.</span>
+<span class="pub-meta">2012 · Computers &amp; Geosciences</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://doi.org/10.1016/j.cageo.2012.03.024" rel="noopener noreferrer" target="_blank">DOI: 10.1016/j.cageo.2012.03.024</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Near-Equatorial Convective Regimes over the Indian Ocean as Revealed by Synergistic Analysis of Satellite Observations</span>
+<span class="pub-authors">Levy, G., Geiss, A., Kumar, M-R.</span>
+<span class="pub-meta">2011 · Advances in Geosciences</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="http://doi.org/10.1142/9789814355315_0008" rel="noopener noreferrer" target="_blank">DOI: 10.1142/9789814355315_0008</a>
+</div>
+</details>
+</div>
+</div>
+
+<h2 id="other">Other Publications</h2>
+
+<div class="pub-group">
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Deep Learning for Ensemble Forecasting</span>
+<span class="pub-authors">Geiss, A., Hardin, J. C., Silva, S., Gustafson, W. I., Varble, A., and Fan, J.</span>
+<span class="pub-meta">2020 · DOE White Paper</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://www.ai4esp.org/files/AI4ESP1048_Geiss_Andrew.pdf" rel="noopener noreferrer" target="_blank">Link: White Paper</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Papers of Note: Radar Super Resolution with Deep Learning</span>
+<span class="pub-authors">Geiss, A., and Hardin J. C.</span>
+<span class="pub-meta">2021 · Bulletin of the American Meteorological Society</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://journals.ametsoc.org/view/journals/bams/102/2/bams.102.issue-2.xml" rel="noopener noreferrer" target="_blank">Link: Publication</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Observed and Modeled Cloud Responses to Climate Variability</span>
+<span class="pub-authors">Geiss, A.</span>
+<span class="pub-meta">2020 · PhD Thesis</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="https://digital.lib.washington.edu/researchworks/handle/1773/45828" rel="noopener noreferrer" target="_blank">Link: Thesis</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Multi-year Trends in MODIS and MISR Observed Cloud Fraction over the Extratropical Oceans</span>
+<span class="pub-authors">Geiss, A.</span>
+<span class="pub-meta">2016 · M.S. Thesis</span>
+</summary>
+<div class="pub-details">
+<p>abstract goes here</p>
+<a class="pub-doi" href="http://hdl.handle.net/1773/36487" rel="noopener noreferrer" target="_blank">Link: Thesis</a>
+</div>
+</details>
+</div>
+</div>
+
+</div>
+</details>
+</div>
+
+
+<div class="section-card tone-7">
+<h2 id="conferences">Conferences</h2>
+<p class="conf-section-hint">click to view presentation materials</p>
+<div class="conf-group">
+<a class="conf-link" href="https://ams.confex.com/ams/102ANNUAL/meetingapp.cgi/Paper/392638" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Assessing and Enhancing Radar Data Quality through Deep Learning</span><span class="conf-meta">2022 · AMS Annual Meeting - Virtual</span></div>
+</a>
+
+<a class="conf-link" href="https://ams.confex.com/ams/102ANNUAL/meetingapp.cgi/Paper/392749" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Enforcing Strict Adherence to Conservation Laws in CNN-Based Super-Resolution</span><span class="conf-meta">2022 · AMS Annual Meeting - Virtual</span></div>
+</a>
+
+<a class="conf-link" href="https://ams.confex.com/ams/101ANNUAL/meetingapp.cgi/Paper/380078" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Mitigation of Radar Blind Zones and Blockage Regions with Adversarial Learning</span><span class="conf-meta">2021 · AMS Annual Meeting - Virtual</span></div>
+</a>
+
+<a class="conf-link" href="https://drive.google.com/file/d/1yf0NwXuXXsRmJpB8EsKNhZ2rjinYXUDv/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Observed and Modeled Cloud Responses to Climate Variability</span><span class="conf-meta">2020 · PhD Defense, Univ. Wash. - Seattle, WA</span></div>
+</a>
+
+<a class="conf-link" href="./documents/conference_materials/2019_ams_geiss-1.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Radar Super-Resolution Using a CNN<i>†</i></span><span class="conf-meta">2019 · AMS Annual Meeting - Phoenix, AZ</span></div>
+</a>
+
+<a class="conf-link" href="./documents/conference_materials/2019_ams_geiss-2.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Observed and Modeled Cloud Responses to Interannual Climate Variability</span><span class="conf-meta">2019 · AMS Annual Meeting - Phoenix, AZ</span></div>
+</a>
+
+<div class="conf-item conf-item-nolink"><span class="conf-title">On the Sensitivity of Marine Stratiform Cloud to Sea Surface Temperature (SST) and SST Reemergence*</span><span class="conf-meta">2018 · AGU Fall Meeting - Washington, DC</span></div>
+
+<a class="conf-link" href="./documents/conference_materials/2018_vladivostok_geiss.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Indian Ocean DITCZs and the Indian Summer Monsoon,<i>†</i>*</span><span class="conf-meta">2018 · "Remote Sensing of the Ocean, Current State and Famous Dates" Symposium - Vladivostok, Russia</span></div>
+</a>
+
+<a class="conf-link" href="./documents/conference_materials/2018_dynamics_seminar_geiss.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Observed and Modeled Cloud Responses to the Annular Modes</span><span class="conf-meta">2018 · Atmospheric Dynamics Seminar, Univ. Wash. - Seattle, WA</span></div>
+</a>
+
+</div>
+
+<details class="conf-more">
+<summary><span class="conf-more-label-closed">view more</span><span class="conf-more-label-open">view less</span></summary>
+
+<div class="conf-more-content">
+<div class="conf-group">
+<a class="conf-link" href="./documents/conference_materials/2018_ams_cloud_phys_rad_geiss-1.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Observed and Modeled Cloud Responses to the Annular Modes</span><span class="conf-meta">2018 · AMS 15th Conference on Cloud Physics and Radiation - Vancouver, Canada</span></div>
+</a>
+<a class="conf-link" href="./documents/conference_materials/2018_ams_cloud_phys_rad_geiss-2.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">The Influence of SST Reemergence on Marine Stratiform Cloud</span><span class="conf-meta">2018 · AMS 15th Conference on Cloud Physics and Radiation - Vancouver, Canada</span></div>
+</a>
+<a class="conf-link" href="./documents/conference_materials/2018_misr_geiss.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">The Influence of SST Reemergence on Marine Stratiform Cloud</span><span class="conf-meta">2018 · MISR Science Team Meeting, Pasadena, CA</span></div>
+</a>
+<a class="conf-link" href="./documents/conference_materials/2018_agu_osm_geiss.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Indian Ocean Double Inter-Tropical Convergence Zones and the Indian Summer Monsoon*</span><span class="conf-meta">2018 · AGU Ocean Sciences Meeting - Portland, OR</span></div>
+</a>
+<a class="conf-link" href="./documents/conference_materials/2016_agu_geiss.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">The Response of Cloud Fraction to Climate Variability over the Extratropical Oceans as Observed by MISR and MODIS</span><span class="conf-meta">2016 · AGU Fall Meeting - San Francisco, CA</span></div>
+</a>
+<a class="conf-link" href="./documents/conference_materials/2016_ms_thesis_presentation_geiss.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Multi-Year Trends in MODIS and MISR Observed Cloud Fraction over the Extratropical Oceans</span><span class="conf-meta">2016 · MS Thesis Presentation, Univ. Wash. - Seattle, WA</span></div>
+</a>
+<a class="conf-link" href="./documents/conference_materials/2016_porsec_geiss.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Classification of DITCZs over the Indian Ocean and Their Relation to the Indian Summer Monsoon*</span><span class="conf-meta">2016 · Pan-Ocean Remote Sensing Conference - Fortaleza, Brazil</span></div>
+</a>
+<a class="conf-link" href="./documents/conference_materials/2014_porsec_geiss.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Examining the Interaction of the Indian Summer Monsoon with Double ITCZs via an Automated Feature Detection Scheme</span><span class="conf-meta">2014 · PORSEC - Bali, Indonesia</span></div>
+</a>
+<a class="conf-link" href="./documents/conference_materials/2012_porsec_geiss.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">Validation of MODIS Aerosol Optical Thickness (AOT) over the Indian Ocean with Field Observations*</span><span class="conf-meta">2012 · Pan-Ocean Remote Sensing Conference - Goa, India</span></div>
+</a>
+<a class="conf-link" href="./documents/conference_materials/2011_ams_geiss.pdf" target="_blank" rel="noopener noreferrer">
+<div class="conf-item"><span class="conf-title">A Data Mining Algorithm for Satellite Data: Application for Double ITCZs,<i>†</i></span><span class="conf-meta">2011 · AMS Annual Meeting - Seattle, WA</span></div>
+</a>
+</div>
+
+</div>
+</details>
+
+
+</div>
+
+<div class="section-card tone-3">
+<h2 id="education">Education</h2>
+PhD Atmospheric Sciences - University of Washington (2020)<br/>
+MS Applied Mathematics - University of Washington (2019)<br/>
+MS Atmospheric Sciences - University of Washington (2016)<br/>
+BS Applied Computational Mathematics in Science - University of Washington (2012) <br/>
+BS Atmospheric Sciences, Atmospheric Chemistry - University of Washington (2012)<br/>
+<br/>
+<h2 id="employment">Employment</h2>
+<a href="https://www.pnnl.gov">2022-Present: Data Scientist, PNNL, Richland, Washington</a><br/>
+<a href="https://www.pnnl.gov">2020-2021: Postdoctoral Research Associate, PNNL, Richland, Washington</a><br/>
+<a href="http://www.nwra.com">2013-2020: Research Assistant, University of Washington, Seattle, Washington</a><br/>
+<a href="http://atmos.uw.edu">2007-2013: Research Assistant, NorthWest Research Associates, Redmond, Washington</a>
+</div>
+
 </div>
 </div>
 </div>
 
+<footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="#about">About</a>
+    <a href="#current-research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#conferences">Conferences</a>
+    <a href="#education">CV</a>
+    <a href="https://github.com/avgeiss" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+  <p class="footer-copy">&copy; 2026 Andrew Geiss &nbsp;&middot;&nbsp; Last updated March 2026</p>
+</footer>
 
 </body></html>
