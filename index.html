@@ -36,24 +36,23 @@ I am a data scientist in the <a class="inline" href="https://www.pnnl.gov/atmosp
 <span class="connect-email">Contact: andrew.geiss@pnnl.gov</span>
 </div>
 <a class="connect-link" href="https://github.com/avgeiss" target="_blank" rel="noopener noreferrer">GitHub</a>
-<a class="connect-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-<a class="connect-link" href="https://zenodo.org" target="_blank" rel="noopener noreferrer">Zenodo</a>
-<a class="connect-link" href="https://orcid.org" target="_blank" rel="noopener noreferrer">ORCID</a>
-<a class="connect-link" href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a class="connect-link" href="https://www.linkedin.com/in/andrew-geiss-9a5a4218a/" target="_blank" rel="noopener noreferrer">LinkedIn</LinkedIn>
+<a class="connect-link" href="https://https://orcid.org/0000-0002-2571-4603" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a class="connect-link" href="https://scholar.google.com/citations?user=EByNwXEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
 </div>
 </div>
 
 
 <div class="section-card tone-2">
 <h2 id="current-research">Current Research</h2>
-
+<p class="read">I primarily contribute to two projects:
 <p class="read">
-<b>Radar Data Inpainting:</b><br/>
-Weather radars are susceptible to a number of failure modes and physical limitations that can cause large blind regions where data is not collected. I am using deep convolutional neural networks to infill missing data regions for several different types of DOE ARM research radars using neighboring information about reflectivity, doppler velocity, and spectrum width. This can be done using two training strategies: one that optimizes the mean squared pixel error of the output, and one that optimizes both mean squared error and adversarial loss using a conditional generative adversarial network. The adversarial training approach produces results that contain realistic small-scale variability while successfully extending large-scale structures into the missing data region.
+<b>ICLASS: Integrated Cloud, Land-surface, and Aerosol System Study</b><br/>
+My work on ICLASS involves using symbolic regression to learn data-driven representations of surface layer fluxes and self-supervised learning to investigate properties of marine stratiform cloud in satellite datasets.
 </p>
 <p class="read">
-<b>Radar Super-Resolution:</b><br/>
-Image super resolution involves artificially increasing the resolution of an image based only on the information contained in the original. The simplest techniques are interpolation schemes which estimate subpixel scale information from only the neighboring pixels in the original image. I am applying state-of-the-art convolutional neural network (CNN) based super resolution schemes to NEXRAD PPI scans. By learning common subpixel scale precipitation features in the context of large-scale weather features, a neural network can significantly outperform interpolation schemes.
+<b>EAGLES: Enabling Aerosol-cloud interactions at GLobal convection-permitting scalES</b><br/>
+My work on EAGLES involves development of new, machine learning based, representations of sub-grid scale physics for use in the Energy Exascale Earth System Model (E3SM). Recent work has focused on improved representation of aerosol optical properties and aerosol activation.
 </p>
 </div>
 
@@ -62,29 +61,119 @@ Image super resolution involves artificially increasing the resolution of an ima
 <p class="pub-section-hint">Click a publication to expand and view the abstract and DOI</p>
 
 
-<!-- #TEMPLATE FOR ADDING PUBLICATIONS:
+
+
+<div class="pub-group">
+
+<!--
 <div class="citation publication-shell">
 <details class="publication-card">
 <summary>
 <span class="pub-title">Title</span>
-<span class="pub-authors">Authors</span>
+<span class="pub-authors">Author</span>
 <span class="pub-meta">Year · Journal</span>
 </summary>
 <div class="pub-details">
 <p>Abstract</p>
-<a class="pub-doi" href="" rel="noopener noreferrer" target="_blank">DOI: </a>
+<a class="pub-doi" href="URL" rel="noopener noreferrer" target="_blank">DOI: </a>
 </div>
 </details>
 </div>
 -->
 
-<div class="pub-group">
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Machine learning reveals strong grid-scale dependence in the satellite Nd–LWP relationship</span>
+<span class="pub-authors">Christensen, M. W., A. Geiss, A. C. Varble, and P.-L. Ma</span>
+<span class="pub-meta">2026 · Atmospheric Chemistry and Physics</span>
+</summary>
+<div class="pub-details">
+<p>The relationship between cloud droplet number concentration (Nd) and liquid water path (LWP) is highly uncertain yet crucial for determining the impact of aerosol-cloud interactions (ACI) on Earth's radiation budget. The Nd-LWP relationship is examined using a machine learning (ML) random forest model applied to five years of satellite data at grid resolutions ranging from 10° to 0.05° in 12 distinct regions. In the subtropics, the shape of the Nd-LWP relationship switches from an inverted-V at 1° grid-resolution to an “M” shape at 0.1° resolution with decreased sensitivity. Tropical and midlatitude regions generally show a more positive sensitivity. Cloud sampling and filtering also influence this slope, wherein the exclusion of thin clouds, as commonly performed to reduce retrieval uncertainty, leads to strongly negative sensitivity across all regions. Precipitation is primarily responsible for driving the strength of the sensitivity, with strong positive slopes in raining clouds and negative and/or neutral responses found in non-raining clouds. A new method to compute radiative forcing from the ML model shows a robust Twomey radiative forcing across all regions and grid resolutions. However, LWP and cloud fraction adjustments to the radiative forcing, which are ∼50 % or smaller than the Twomey effect, decrease to negligible values with higher spatial resolution data. As Earth system models move toward higher spatial resolutions in the future, evaluating the LWP and CF adjustment contributions to the radiative forcing budget at these finer resolutions will be essential for evaluation and model development.</p>
+<a class="pub-doi" href="https://doi.org/10.5194/acp-26-59-2026" rel="noopener noreferrer" target="_blank">DOI: 10.5194/acp-26-59-2026</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">NeuralMie (v1. 0): an aerosol optics emulator</span>
+<span class="pub-authors">Geiss, A., P.-L. Ma</span>
+<span class="pub-meta">2025 · Geoscientific model development</span>
+</summary>
+<div class="pub-details">
+<p>The direct interactions of atmospheric aerosols with radiation significantly impact the Earth's climate and weather and are important to represent accurately in simulations of the atmosphere. This work introduces two contributions to enable a more accurate representation of aerosol optics in atmosphere models: (1) NeuralMie, a neural network Mie scattering emulator that can directly compute the bulk optical properties of a diverse range of aerosol populations and is appropriate for use in atmosphere simulations where aerosol optical properties are parameterized, and (2) TAMie, a fast Python-based Mie scattering code based on the Mie scattering algorithm that can represent both homogeneous and coated particles. TAMie achieves speed and accuracy comparable to established Fortran Mie codes and is used to produce training data for NeuralMie. NeuralMie is highly flexible and can be used for a wide range of particle types, wavelengths, and mixing assumptions. It can represent core-shell scattering and, by directly estimating bulk optical properties, is more efficient than existing Mie code and Mie code emulators while incurring negligible error compared to existing aerosol optics parameterization schemes (0.08 % mean absolute percentage error).</p>
+<a class="pub-doi" href="https://doi.org/10.5194/gmd-18-1809-2025" rel="noopener noreferrer" target="_blank">DOI: 10.5194/gmd-18-1809-2025</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Mesoscale cellular convection detection and classification using convolutional neural networks: Insights from long‐term observations at ARM Eastern North Atlantic site</span>
+<span class="pub-authors">Tian, J., J. Comstock, A. Geiss, P. Wu, I. Silber, D. Zhang, P. Kooloth, Y.‐C. Feng</span>
+<span class="pub-meta">2025 · Journal of Geophysical Research: Machine Learning and Computation</span>
+</summary>
+<div class="pub-details">
+<p>Marine boundary layer clouds are crucial in Earth's climate system. They frequently manifest as closed or open cell mesoscale cellular convection (MCC). MCC clouds are challenging to represent accurately in current climate models, highlighting the need for detailed observational data sets and in-depth analyses. This study utilizes over 8 years of observations from the U.S. Department of Energy (DOE) Atmospheric Radiation Measurement (ARM) User Facility Eastern North Atlantic (ENA) site at Graciosa Island, Azores, to investigate these clouds. We first apply a convolutional neural network with a U-Net architecture to classify open and closed cells, marking the first application of such an approach for automatically detecting MCC patterns from ground-based radar measurements. This method addresses some observational gaps in satellite data related to low temporal resolution, nighttime challenges, and limited vertical structure capture. The analysis of the MCC cases shows clear differences between closed and open MCCs: Closed MCC clouds are characterized by lower cloud tops and bases, shallower cloud geometrical depth, weaker horizontal wind speeds, stronger atmospheric stability, and a more homogeneous liquid water path than open MCCs. Finally, we demonstrate two potential applications of our radar-based MCC classifications: (a) facilitating the investigation of aerosol-cloud interactions and (b) exploring meteorological factors along with MCC's evolution by integrating satellite imagery and back-trajectory analysis. The identified MCC cases offer a valuable resource for the scientific community to study MCC processes further and improve climate model accuracy.</p>
+<a class="pub-doi" href=" https://doi.org/10.1029/2024JH000486" rel="noopener noreferrer" target="_blank">DOI:  10.1029/2024JH000486</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Impacts of Bulk Microphysics Scheme Structural Choices on Simulations of Rain Initiation Through Drop Coalescence</span>
+<span class="pub-authors">Morrison, H., P-L. Ma, A. Geiss, A. L. Igel, A. Z. Hu, M. van Lier-Walqui</span>
+<span class="pub-meta">2025 · Journal of Advances in Modeling Earth Systems
+</span>
+</summary>
+<div class="pub-details">
+<p>This study examines how different structural choices in bulk microphysics schemes impact the simulation of warm rain initiation. A single liquid category (SLC) approach prognosing up to four moments of a single drop size distribution (DSD) is compared to the traditional two-category, two-moment approach with separate DSDs for cloud and rain (four total prognostic variables). Different methods for calculating tendencies of the prognostic variables from drop collision-coalescence are also tested: a discretized numerical-integration approach, machine learning via neural networks, lookup tables, and traditional power law fits. Relative to simulations using a bin microphysics model, SLC gives smaller error overall than the two-category approach when numerical integration is used to calculate the collision-coalescence tendencies for both. Replacing the numerical integration with a pre-computed lookup table reduces computational cost with little loss of accuracy. However, using fitted power laws with SLC to represent the collision-coalescence tendencies substantially reduces accuracy and leads to an order of magnitude increase in error. It is also demonstrated that with SLC, reasonably accurate solutions are obtained using only three prognostic moments, while a two-moment SLC scheme leads to substantial error. Overall, both the choice of prognostic moments (e.g., SLC vs. two-category) and method to calculate the collision-coalescence tendencies are important to consider for minimizing errors in bulk schemes. SLC with a sufficiently detailed calculation of the collision-coalescence tendencies provides accurate solutions for a reasonable computational cost, providing a viable alternative to the traditional two-category, two-moment approach for bulk microphysics.</p>
+<a class="pub-doi" href="https://doi.org/10.1029/2025MS005026" rel="noopener noreferrer" target="_blank">DOI: 10.1029/2025MS005026</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">A derecho climatology (2004–2021) in the United States based on machine learning identification of bow echoes</span>
+<span class="pub-authors">Li, J., A. Geiss, Z. Feng, L. R. Leung, Y. Qian, W. Cui</span>
+<span class="pub-meta">2025 · Earth System Science Data</span>
+</summary>
+<div class="pub-details">
+<p>Due to their persistent widespread severe winds, derechos pose significant threats to human safety and property, with impacts comparable to many tornadoes and hurricanes. Yet, automated detection of derechos remains challenging due to the absence of spatiotemporally continuous observations and the complex criteria employed to define the phenomenon. This study presents an objective derecho detection approach capable of automatically identifying derechos through both observations and model results. The approach is grounded in a physically based definition of derechos and integrates three algorithms: (1) the Python Flexible Object Tracker (PyFLEXTRKR) algorithm to track mesoscale convective systems (MCSs), (2) a semantic segmentation convolutional neural network to identify bow echoes, and (3) a comprehensive classification algorithm to detect derechos within MCS life cycles and distinguish derecho-producing from non-derecho-producing MCSs. Using this approach, we developed a novel high-resolution (4 km and hourly) observational dataset of derechos and accompanying derecho-producing MCSs over the United States east of the Rocky Mountains from 2004 to 2021. The dataset consists of two subsets based on different gust speed data sources and is analyzed to document the climatology of derechos in the United States. On average, 12–15 derechos are identified per year, aligning with previous estimations (∼6–21 events annually). The spatial distribution and seasonal variation patterns are consistent with prior studies, showing peak occurrences in the Great Plains and the Midwest during the warm season. Additionally, during the study period, derechos account for approximately 3.1 % of measured damaging gusts (≥25.93 m s−1) over the eastern United States. The dataset is publicly available at https://doi.org/10.5281/zenodo.14835362 (Li et al., 2025).</p>
+<a class="pub-doi" href="https://doi.org/10.5194/essd-17-3721-2025" rel="noopener noreferrer" target="_blank">DOI: 10.5194/essd-17-3721-2025</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Classifying thermodynamic cloud phase using machine learning models</span>
+<span class="pub-authors">Goldberger, L., M. Levin, C. Harris, A. Geiss, M. D. Shupe, and D. Zhang</span>
+<span class="pub-meta">2025 · Atmospheric Measurement Techniques</span>
+</summary>
+<div class="pub-details">
+<p>Vertically resolved thermodynamic cloud-phase classifications are essential for studies of atmospheric cloud and precipitation processes. The Department of Energy (DOE) Atmospheric Radiation Measurement (ARM) Thermodynamic Cloud Phase (THERMOCLDPHASE) value-added product (VAP) uses a multi-sensor approach to classify the thermodynamic cloud phase by combining lidar backscatter and depolarization, radar reflectivity, Doppler velocity, spectral width, microwave-radiometer-derived liquid water path, and radiosonde temperature measurements. The measured pixels are classified as ice, snow, mixed phase, liquid (cloud water), drizzle, rain, and liq_driz (liquid+drizzle). We use this product as the ground truth to train three machine learning (ML) models to predict the thermodynamic cloud phase from multi-sensor remote sensing measurements taken at the ARM North Slope of Alaska (NSA) observatory: a random forest (RF), a multi-layer perceptron (MLP), and a convolutional neural network (CNN) with a U-Net architecture. Evaluations against the outputs of the THERMOCLDPHASE VAP with 1 year of data show that the CNN outperforms the other two models, achieving the highest test accuracy, F1 score, and mean intersection over union (IOU). Analysis of ML confidence scores shows that ice, rain, and snow have higher confidence scores, followed by liquid, while mixed, drizzle, and liq_driz have lower scores. Feature importance analysis reveals that the mean Doppler velocity and vertically resolved temperature are the most influential data streams for ML thermodynamic cloud-phase predictions. Lidar measurements exhibit lower feature importance due to rapid signal attenuation caused by the frequent presence of persistent low-level clouds at the NSA site. The ML models' generalization capacity is further evaluated by applying them at another Arctic ARM site in Norway using data taken during the ARM Cold-Air Outbreaks in the Marine Boundary Layer Experiment (COMBLE) field campaign. The models demonstrated similar performance to that observed at the NSA site. Finally, we evaluate the ML models' response to simulated instrument outages and signal degradation and show that a CNN U-Net model trained with input channel dropouts performs better when input fields are missing.</p>
+<a class="pub-doi" href="https://doi.org/10.5194/amt-18-5393-2025" rel="noopener noreferrer" target="_blank">DOI: 10.5194/amt-18-5393-2025</a>
+</div>
+</details>
+</div>
+
 <div class="citation publication-shell">
 <details class="publication-card">
 <summary>
 <span class="pub-title">Self-Supervised Cloud Classification</span>
 <span class="pub-authors">Geiss, A., M. W. Christensen, A. C. Varble, T. Yuan, and H. Song</span>
-<span class="pub-meta">2024 · Artif. Intell. Earth Syst.</span>
+<span class="pub-meta">2024 · Artificial Intelligence for the Earth Systems
+</span>
 </summary>
 <div class="pub-details">
 <p>Low-level marine clouds play a pivotal role in Earth’s weather and climate through their interactions with radiation, heat and moisture transport, and the hydrological cycle. These interactions depend on a range of dynamical and microphysical processes that result in a broad diversity of cloud types and spatial structures, and a comprehensive understanding of cloud morphology is critical for continued improvement of our atmospheric modeling and prediction capabilities moving forward. Deep learning has recently accelerated our ability to study clouds using satellite remote sensing, and machine learning classifiers have enabled detailed studies of cloud morphology. A major limitation of deep learning approaches to this problem, however, is the large number of hand-labeled samples that are required for training. This work applies a recently developed self-supervised learning scheme to train a deep convolutional neural network (CNN) to map marine cloud imagery to vector embeddings that capture information about mesoscale cloud morphology and can be used for satellite image classification. The model is evaluated against existing cloud classification datasets and several use cases are demonstrated, including training cloud classifiers with very few labeled samples, interrogation of the CNN’s learned internal feature representations, cross-instrument application, and resilience against sensor calibration drift and changing scene brightness. The self-supervised approach learns meaningful internal representations of cloud structures and achieves comparable classification accuracy to supervised deep learning methods without the expense of creating large hand-annotated training datasets.</p>
@@ -96,13 +185,13 @@ Image super resolution involves artificially increasing the resolution of an ima
 <div class="citation publication-shell">
 <details class="publication-card">
 <summary>
-<span class="pub-title">Emulating Aerosol Optics with Randomly Generated Neural Networks</span>
-<span class="pub-authors">Geiss, A., Ma, P.-L., Singh, B., and Hardin, J. C.</span>
-<span class="pub-meta">2022 · EGUsphere</span>
+<span class="pub-title">Updraft width modulates ambient atmospheric controls on convective cloud depth</span>
+<span class="pub-authors">Varble, A. C., Z. Feng, J. N. Marquis, Z. Zhang, A. Geiss, J. C. Hardin, E. Jo</span>
+<span class="pub-meta">2024 · Journal of Geophysical Research: Atmospheres</span>
 </summary>
 <div class="pub-details">
-<p>abstract goes here</p>
-<a class="pub-doi" href="https://doi.org/10.5194/egusphere-2022-559" rel="noopener noreferrer" target="_blank">DOI: 10.5194/egusphere-2022-559</a>
+<p>The depth of convective clouds affects vertical transport of atmospheric constituents, influencing downstream weather and climate. Atmospheric controls on the maximum depth reached by moist convection are investigated with radar-tracked convective cells tagged with sounding-derived atmospheric parameters from a field campaign in central Argentina. Regression analyses show that narrow (<12-km diameter) and wide (>16-km diameter) cell depths respond to disparate factors, where cell areas are defined using composite reflectivity signatures. Undiluted lifted parcel indices including convective available potential energy (CAPE) and level of neutral buoyancy (LNB) are top predictors of wide cell maximum depth while mid-tropospheric relative humidity is the top predictor of narrow cell maximum depth. Because narrow cells are more numerous than wide cells, the overall outcome of the full cell population does not strongly correlate with CAPE and LNB conditions. Tracked cells and atmospheric conditions in a simulation with 3-km grid spacing covering the field campaign produce similar results to those observed. Narrow cells that are relatively deep have a cooler and moister mid-troposphere with weaker free tropospheric subsidence, while relatively deep wide cells have much warmer and moister lower tropospheric conditions. These atmospheric differences are present 1 hr before cell initiation at both a fixed observing site and variable cell initiation locations. Simulated narrow cell maximum equivalent potential temperature decreases with height at a rate similar to the ambient vertical gradient, causing these cells to fall short of their LNB and supporting the view that entrainment-driven dilution is a dominant control on their depth.</p>
+<a class="pub-doi" href=" https://doi.org/10.1029/2024JD041769" rel="noopener noreferrer" target="_blank">DOI:  10.1029/2024JD041769</a>
 </div>
 </details>
 </div>
@@ -110,13 +199,55 @@ Image super resolution involves artificially increasing the resolution of an ima
 <div class="citation publication-shell">
 <details class="publication-card">
 <summary>
-<span class="pub-title">Downscaling Atmospheric Chemistry Simulations with Physically Consistent Deep Learning</span>
-<span class="pub-authors">Geiss, A., Silva, S., and Hardin, J.</span>
-<span class="pub-meta">2022 · Geosci. Model Dev. Discuss.</span>
+<span class="pub-title">Development of a full-scale connected U-Net for reflectivity inpainting in spaceborne radar blind zones</span>
+<span class="pub-authors">King, F., C. Pettersen, C. G. Fletcher, A. Geiss</span>
+<span class="pub-meta">2024 · Artificial Intelligence for the Earth Systems</span>
 </summary>
 <div class="pub-details">
-<p>abstract goes here</p>
-<a class="pub-doi" href="https://doi.org/10.5194/gmd-2022-76" rel="noopener noreferrer" target="_blank">DOI: 10.5194/gmd-2022-76</a>
+<p>CloudSat’s Cloud Profiling Radar is a valuable tool for remotely monitoring high-latitude snowfall, but its ability to observe hydrometeor activity near the Earth’s surface is limited by a radar blind zone caused by ground clutter contamination. This study presents the development of a deeply supervised U-Net-style convolutional neural network to predict cold season reflectivity profiles within the blind zone at two Arctic locations. The network learns to predict the presence and intensity of near-surface hydrometeors by coupling latent features encoded in blind zone-aloft clouds with additional context from collocated atmospheric state variables (i.e., temperature, specific humidity, and wind speed). Results show that the U-Net predictions outperform traditional linear extrapolation methods, with low mean absolute error, a 38% higher Sørensen–Dice coefficient, and vertical reflectivity distributions 60% closer to observed values. The U-Net is also able to detect the presence of near-surface cloud with a critical success index (CSI) of 72% and cases of shallow cumuliform snowfall and virga with 18% higher CSI values compared to linear methods. An explainability analysis shows that reflectivity information throughout the scene, especially at cloud edges and at the 1.2-km blind zone threshold, along with atmospheric state variables near the tropopause, are the most significant contributors to model skill. This surface-trained generative inpainting technique has the potential to enhance current and future remote sensing precipitation missions by providing a better understanding of the nonlinear relationship between blind zone reflectivity values and the surrounding atmospheric state.</p>
+<a class="pub-doi" href="https://doi.org/10.1175/AIES-D-23-0063.1" rel="noopener noreferrer" target="_blank">DOI: 10.1175/AIES-D-23-0063.1</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Emulating Aerosol Optics with Randomly Generated Neural Networks</span>
+<span class="pub-authors">Geiss, A., Ma, P.-L., Singh, B., and Hardin, J. C.</span>
+<span class="pub-meta">2023 · Geoscientific Model Development</span>
+</summary>
+<div class="pub-details">
+<p>Atmospheric aerosols have a substantial impact on climate and remain one of the largest sources of uncertainty in climate prediction. Accurate representation of their direct radiative effects is a crucial component of modern climate models. However, direct computation of the radiative properties of aerosol populations is far too computationally expensive to perform in a climate model, so optical properties are typically approximated using a parameterization. This work develops artificial neural networks (ANNs) capable of replacing the current aerosol optics parameterization used in the Energy Exascale Earth System Model (E3SM). A large training dataset is generated by using Mie code to directly compute the optical properties of a range of atmospheric aerosol populations given a large variety of particle sizes, wavelengths, and refractive indices. Optimal neural architectures for shortwave and longwave bands are identified by evaluating ANNs with randomly generated wirings. Randomly generated deep ANNs are able to outperform conventional multilayer-perceptron-style architectures with comparable parameter counts. Finally, the ANN-based parameterization produces significantly more accurate bulk aerosol optical properties than the current parameterization when compared with direct Mie calculations using mean absolute error. The success of this approach makes possible the future inclusion of much more sophisticated representations of aerosol optics in climate models that cannot be captured by extension of the existing parameterization scheme and also demonstrates the potential of random-wiring-based neural architecture search in future applications in the Earth sciences.</p>
+<a class="pub-doi" href="https://doi.org/10.5194/gmd-16-2355-2023" rel="noopener noreferrer" target="_blank">DOI: 10.5194/gmd-16-2355-2023</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Exploring randomly wired neural networks for climate model emulation</span>
+<span class="pub-authors">Yik, W., S. J. Silva, A. Geiss, D. Watson-Parris</span>
+<span class="pub-meta">2023 · Artificial Intelligence for the Earth Systems</span>
+</summary>
+<div class="pub-details">
+<p>Exploring the climate impacts of various anthropogenic emissions scenarios is key to making informed decisions for climate change mitigation and adaptation. State-of-the-art Earth system models can provide detailed insight into these impacts but have a large associated computational cost on a per-scenario basis. This large computational burden has driven recent interest in developing cheap machine learning models for the task of climate model emulation. In this paper, we explore the efficacy of randomly wired neural networks for this task. We describe how they can be constructed and compare them with their standard feedforward counterparts using the ClimateBench dataset. Specifically, we replace the serially connected dense layers in multilayer perceptrons, convolutional neural networks, and convolutional long short-term memory networks with randomly wired dense layers and assess the impact on model performance for models with 1 million and 10 million parameters. We find that models with less-complex architectures see the greatest performance improvement with the addition of random wiring (up to 30.4% for multilayer perceptrons). Furthermore, of 24 different model architecture, parameter count, and prediction task combinations, only one had a statistically significant performance deficit in randomly wired networks relative to their standard counterparts, with 14 cases showing statistically significant improvement. We also find no significant difference in prediction speed between networks with standard feedforward dense layers and those with randomly wired layers. These findings indicate that randomly wired neural networks may be suitable direct replacements for traditional dense layers in many standard models.</p>
+<a class="pub-doi" href="https://doi.org/10.1175/AIES-D-22-0088.1" rel="noopener noreferrer" target="_blank">DOI: 10.1175/AIES-D-22-0088.1</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Downscaling atmospheric chemistry simulations with physically consistent deep learning</span>
+<span class="pub-authors">Geiss, A., Silva, S. J., and Hardin, J. C.</span>
+<span class="pub-meta">2022 · Geoscientific Model Development </span>
+</summary>
+<div class="pub-details">
+<p>Recent advances in deep convolutional neural network (CNN)-based super resolution can be used to downscale atmospheric chemistry simulations with substantially higher accuracy than conventional downscaling methods. This work both demonstrates the downscaling capabilities of modern CNN-based single image super resolution and video super-resolution schemes and develops modifications to these schemes to ensure they are appropriate for use with physical science data. The CNN-based video super-resolution schemes in particular incur only 39 % to 54 % of the grid-cell-level error of interpolation schemes and generate outputs with extremely realistic small-scale variability based on multiple perceptual quality metrics while performing a large (8×10) increase in resolution in the spatial dimensions. Methods are introduced to strictly enforce physical conservation laws within CNNs, perform large and asymmetric resolution changes between common model grid resolutions, account for non-uniform grid-cell areas, super-resolve lognormally distributed datasets, and leverage additional inputs such as high-resolution climatologies and model state variables. High-resolution chemistry simulations are critical for modeling regional air quality and for understanding future climate, and CNN-based downscaling has the potential to generate these high-resolution simulations and ensembles at a fraction of the computational cost.</p>
+<a class="pub-doi" href="https://doi.org/10.5194/gmd-15-6677-2022" rel="noopener noreferrer" target="_blank">DOI: 10.5194/gmd-15-6677-2022</a>
 </div>
 </details>
 </div>
@@ -126,81 +257,11 @@ Image super resolution involves artificially increasing the resolution of an ima
 <summary>
 <span class="pub-title">Inpainting radar missing data regions with deep learning</span>
 <span class="pub-authors">Geiss, A. and Hardin, J. C.</span>
-<span class="pub-meta">2021 · Atmos. Meas. Tech.</span>
+<span class="pub-meta">2021 · Atmospheric Measurement Techniques</span>
 </summary>
 <div class="pub-details">
-<p>abstract goes here</p>
+<p>Missing and low-quality data regions are a frequent problem for weather radars. They stem from a variety of sources: beam blockage, instrument failure, near-ground blind zones, and many others. Filling in missing data regions is often useful for estimating local atmospheric properties and the application of high-level data processing schemes without the need for preprocessing and error-handling steps – feature detection and tracking, for instance. Interpolation schemes are typically used for this task, though they tend to produce unrealistically spatially smoothed results that are not representative of the atmospheric turbulence and variability that are usually resolved by weather radars. Recently, generative adversarial networks (GANs) have achieved impressive results in the area of photo inpainting. Here, they are demonstrated as a tool for infilling radar missing data regions. These neural networks are capable of extending large-scale cloud and precipitation features that border missing data regions into the regions while hallucinating plausible small-scale variability. In other words, they can inpaint missing data with accurate large-scale features and plausible local small-scale features. This method is demonstrated on a scanning C-band and vertically pointing Ka-band radar that were deployed as part of the Cloud Aerosol and Complex Terrain Interactions (CACTI) field campaign. Three missing data scenarios are explored: infilling low-level blind zones and short outage periods for the Ka-band radar and infilling beam blockage areas for the C-band radar. Two deep-learning-based approaches are tested, a convolutional neural network (CNN) and a GAN that optimize pixel-level error or combined pixel-level error and adversarial loss respectively. Both deep-learning approaches significantly outperform traditional inpainting schemes under several pixel-level and perceptual quality metrics.</p>
 <a class="pub-doi" href="https://doi.org/10.5194/amt-14-7729-2021" rel="noopener noreferrer" target="_blank">DOI: 10.5194/amt-14-7729-2021</a>
-</div>
-</details>
-</div>
-
-<div class="citation publication-shell">
-<details class="publication-card">
-<summary>
-<span class="pub-title">Strict Enforcement of Conservation Laws and Invertibility in CNN-Based Super Resolution for Scientific Datasets</span>
-<span class="pub-authors">Geiss, A. and Hardin, J. C.</span>
-<span class="pub-meta">2020 · arXiv</span>
-</summary>
-<div class="pub-details">
-<p>abstract goes here</p>
-<a class="pub-doi" href="https://arxiv.org/abs/2011.05586" rel="noopener noreferrer" target="_blank">Link: arXiv</a>
-</div>
-</details>
-</div>
-
-<div class="citation publication-shell">
-<details class="publication-card">
-<summary>
-<span class="pub-title">Radar Super Resolution using a Deep Convolutional Neural Network</span>
-<span class="pub-authors">Geiss, A. and Hardin, J. C.</span>
-<span class="pub-meta">2020 · Journal of Atmospheric and Oceanic Technology</span>
-</summary>
-<div class="pub-details">
-<p>abstract goes here</p>
-<a class="pub-doi" href="https://doi.org/10.1175/JTECH-D-20-0074.1" rel="noopener noreferrer" target="_blank">DOI: 10.1175/JTECH-D-20-0074.1</a>
-</div>
-</details>
-</div>
-
-<div class="citation publication-shell">
-<details class="publication-card">
-<summary>
-<span class="pub-title">The Influence of Sea Surface Temperature Reemergence on Marine Stratiform Cloud</span>
-<span class="pub-authors">Geiss, A., Marchand, R., and Thompson, L.</span>
-<span class="pub-meta">2020 · Geophysical Research Letters</span>
-</summary>
-<div class="pub-details">
-<p>abstract goes here</p>
-<a class="pub-doi" href="https://doi.org/10.1029/2020GL086957" rel="noopener noreferrer" target="_blank">DOI: 10.1029/2020GL086957</a>
-</div>
-</details>
-</div>
-
-<div class="citation publication-shell">
-<details class="publication-card">
-<summary>
-<span class="pub-title">Cloud responses to climate variability over the extratropical oceans as observed by MISR and MODIS</span>
-<span class="pub-authors">Geiss, A. and Marchand, R.</span>
-<span class="pub-meta">2019 · Atmospheric Chemistry and Physics</span>
-</summary>
-<div class="pub-details">
-<p>abstract goes here</p>
-<a class="pub-doi" href="https://doi.org/10.5194/acp-19-7547-2019" rel="noopener noreferrer" target="_blank">DOI: 10.5194/acp-19-7547-2019</a>
-</div>
-</details>
-</div>
-
-<div class="citation publication-shell">
-<details class="publication-card">
-<summary>
-<span class="pub-title">Decomposition of Spatial Structure of Nocturnal Flow over Gentle Terrain</span>
-<span class="pub-authors">Geiss, A., and Mahrt, L.</span>
-<span class="pub-meta">2015 · Boundary Layer Meteorology</span>
-</summary>
-<div class="pub-details">
-<p>abstract goes here</p>
-<a class="pub-doi" href="https://doi.org/10.1007/s10546-015-0043-7" rel="noopener noreferrer" target="_blank">DOI: 10.1007/s10546-015-0043-7</a>
 </div>
 </details>
 </div>
@@ -214,6 +275,79 @@ Image super resolution involves artificially increasing the resolution of an ima
 
 <div class="pub-group">
 
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Strictly Enforcing Invertibility and Conservation in CNN-Based Super Resolution for Scientific Datasets</span>
+<span class="pub-authors">Geiss, A. and Hardin, J. C.</span>
+<span class="pub-meta">2023 · Artificial Intelligence for the Earth Systems
+</span>
+</summary>
+<div class="pub-details">
+<p>Recently, deep convolutional neural networks (CNNs) have revolutionized image “super resolution” (SR), dramatically outperforming past methods for enhancing image resolution. They could be a boon for the many scientific fields that involve imaging or any regularly gridded datasets: satellite remote sensing, radar meteorology, medical imaging, numerical modeling, and so on. Unfortunately, while SR-CNNs produce visually compelling results, they do not necessarily conserve physical quantities between their low-resolution inputs and high-resolution outputs when applied to scientific datasets. Here, a method for “downsampling enforcement” in SR-CNNs is proposed. A differentiable operator is derived that, when applied as the final transfer function of a CNN, ensures the high-resolution outputs exactly reproduce the low-resolution inputs under 2D-average downsampling while improving performance of the SR schemes. The method is demonstrated across seven modern CNN-based SR schemes on several benchmark image datasets, and applications to weather radar, satellite imager, and climate model data are shown. The approach improves training time and performance while ensuring physical consistency between the super-resolved and low-resolution data.</p>
+<a class="pub-doi" href="https://doi.org/10.1175/AIES-D-21-0012.1" rel="noopener noreferrer" target="_blank">DOI: 10.1175/AIES-D-21-0012.1</a><br/>
+<a class="pub-doi" href="https://arxiv.org/abs/2011.05586" rel="noopener noreferrer" target="_blank">Link: arXiv preprint (2020)</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Radar Super Resolution using a Deep Convolutional Neural Network</span>
+<span class="pub-authors">Geiss, A. and Hardin, J. C.</span>
+<span class="pub-meta">2020 · Journal of Atmospheric and Oceanic Technology</span>
+</summary>
+<div class="pub-details">
+<p>Super resolution involves synthetically increasing the resolution of gridded data beyond their native resolution. Typically, this is done using interpolation schemes, which estimate sub-grid-scale values from neighboring data, and perform the same operation everywhere regardless of the large-scale context, or by requiring a network of radars with overlapping fields of view. Recently, significant progress has been made in single-image super resolution using convolutional neural networks. Conceptually, a neural network may be able to learn relations between large-scale precipitation features and the associated sub-pixel-scale variability and outperform interpolation schemes. Here, we use a deep convolutional neural network to artificially enhance the resolution of NEXRAD PPI scans. The model is trained on 6 months of reflectivity observations from the Langley Hill, Washington, radar (KLGX), and we find that it substantially outperforms common interpolation schemes for 4× and 8× resolution increases based on several objective error and perceptual quality metrics.</p>
+<a class="pub-doi" href="https://doi.org/10.1175/JTECH-D-20-0074.1" rel="noopener noreferrer" target="_blank">DOI: 10.1175/JTECH-D-20-0074.1</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">The Influence of Sea Surface Temperature Reemergence on Marine Stratiform Cloud</span>
+<span class="pub-authors">Geiss, A., Marchand, R., and Thompson, L.</span>
+<span class="pub-meta">2020 · Geophysical Research Letters</span>
+</summary>
+<div class="pub-details">
+<p>The global distribution of winter to winter sea surface temperature (SST) reemergence is analyzed using a novel metric based on an autoregressive 1 model, and the global impact of SST on cloud amount and cloud type are examined using satellite data. A region in the northeastern Pacific Ocean is identified where wintertime SSTs are correlated with the occurrence of marine stratiform cloud the following winter. This correlation is likely a manifestation of SST reemergence. We hypothesize that through this reemergence mechanism marine stratus cloud amount, and thus shortwave cloud radiative effect, in the northeastern Pacific exhibits memory on inter-seasonal and even multi-year time scales and that exploration of this relationship may provide insight into the SST—low cloud feedbacks.</p>
+<a class="pub-doi" href="https://doi.org/10.1029/2020GL086957" rel="noopener noreferrer" target="_blank">DOI: 10.1029/2020GL086957</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Cloud responses to climate variability over the extratropical oceans as observed by MISR and MODIS</span>
+<span class="pub-authors">Geiss, A. and Marchand, R.</span>
+<span class="pub-meta">2019 · Atmospheric Chemistry and Physics</span>
+</summary>
+<div class="pub-details">
+<p>Linear temporal trends in cloud fraction over the extratropical oceans, observed by NASA's Multi-angle Imaging SpectroRadiometer (MISR) during the period from 2000 to 2013, are examined in the context of coincident European Centre for Medium-Range Weather Forecasts (ECMWF) reanalysis data using a maximum covariance analysis. Changes in specific cloud types defined with respect to cloud-top height and cloud optical depth are related to trends in reanalysis variables. A pattern of reduced high-altitude optically thick cloud and increased low-altitude cloud of moderate optical depth is found to be associated with increased temperatures, geopotential heights, and anti-cyclonic flow over the extratropical oceans. These and other trends in cloud occurrence are shown to be correlated with changes in the El Niño–Southern Oscillation (ENSO), the Pacific Decadal Oscillation (PDO), the North Pacific index (NPI), and the Southern Annular Mode (SAM).</p>
+<a class="pub-doi" href="https://doi.org/10.5194/acp-19-7547-2019" rel="noopener noreferrer" target="_blank">DOI: 10.5194/acp-19-7547-2019</a>
+</div>
+</details>
+</div>
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">Decomposition of Spatial Structure of Nocturnal Flow over Gentle Terrain</span>
+<span class="pub-authors">Geiss, A., and Mahrt, L.</span>
+<span class="pub-meta">2015 · Boundary Layer Meteorology</span>
+</summary>
+<div class="pub-details">
+<p>A network of sonic anemometers was deployed over gentle terrain in north-eastern Colorado, USA to observe and characterize local nocturnal circulations. Our study focuses on a small valley about 270 m wide and 12 m deep with a down-valley slope of 2–3 %. The measurements include 19 stations with sonic anemometers at 1 m and a 20-m tower that includes six sonic anemometers in the lowest 5 m. Shallow cold pools and drainage down the valley develop for weak ambient flow and relatively clear skies. However, transient modes constantly modulate or intermittently eliminate the cold pool, which makes extraction and analysis of the horizontal structure of the cold pool difficult with traditional analysis methods. Singular value decomposition successfully isolates the effects of large-scale flow from local down-valley cold-air drainage within the cold pool in spite of the intermittent nature of this local flow. Shortcomings of the method are noted.</p>
+<a class="pub-doi" href="https://doi.org/10.1007/s10546-015-0043-7" rel="noopener noreferrer" target="_blank">DOI: 10.1007/s10546-015-0043-7</a>
+</div>
+</details>
+</div>
+
 <div class="citation publication-shell">
 <details class="publication-card">
 <summary>
@@ -222,7 +356,7 @@ Image super resolution involves artificially increasing the resolution of an ima
 <span class="pub-meta">2012 · Computers &amp; Geosciences</span>
 </summary>
 <div class="pub-details">
-<p>abstract goes here</p>
+<p>We develop an automated and user-trained algorithm that spatially analyzes satellite data and detects the presence of double inter-tropical convergence zones (DITCZ) and apply it to 30 years worth of satellite collected outgoing long-wave radiation data. The analysis of the data via vertical wavelet transform identifies DITCZ occurrences over the Indian Ocean in the last three decades.</p>
 <a class="pub-doi" href="https://doi.org/10.1016/j.cageo.2012.03.024" rel="noopener noreferrer" target="_blank">DOI: 10.1016/j.cageo.2012.03.024</a>
 </div>
 </details>
@@ -236,7 +370,7 @@ Image super resolution involves artificially increasing the resolution of an ima
 <span class="pub-meta">2011 · Advances in Geosciences</span>
 </summary>
 <div class="pub-details">
-<p>abstract goes here</p>
+<p>We examine the organization and temporal evolution of deep convection in relation to the low level flow over the Indian Ocean by a synergistic analysis of several satellite datasets for wind, rainfall, Outgoing Longwave Radiation (OLR) and cloud liquid water. We show that during the active Indian monsoon season, symmetric instability is present and is directly linked to organized convection and the off-equatorial location of the InterTropical Convergence Zone (ITCZ). The inertial regime interacts with and is controlled by monsoon and cross-equatorial flow. We characterize the dominant regimes of deep convective organization and the possible ocean–atmosphere mechanisms that control them at different phases of the Indian Monsoon. Ongoing work on development of algorithms for automated identification of convective regimes in climate data and their application and testing on 30 years of OLR data are discussed, and preliminary results of the double ITCZ organization in climate data are presented.</p>
 <a class="pub-doi" href="http://doi.org/10.1142/9789814355315_0008" rel="noopener noreferrer" target="_blank">DOI: 10.1142/9789814355315_0008</a>
 </div>
 </details>
@@ -246,6 +380,21 @@ Image super resolution involves artificially increasing the resolution of an ima
 <h2 id="other">Other Publications</h2>
 
 <div class="pub-group">
+
+<div class="citation publication-shell">
+<details class="publication-card">
+<summary>
+<span class="pub-title">A Two-Step Approach to Training Earth Scientists in AI</span>
+<span class="pub-authors">Goldberger, L., P. Jiang, T. Chakraborty, A. Geiss, X. Chen</span>
+<span class="pub-meta">2025 · EOS, PNNL</span>
+</summary>
+<div class="pub-details">
+<br/>
+<a class="pub-doi" href="https://www.osti.gov/pages/servlets/purl/2586365" rel="noopener noreferrer" target="_blank">Article link: OSTI.gov</a>
+</div>
+</details>
+</div>
+
 <div class="citation publication-shell">
 <details class="publication-card">
 <summary>
@@ -254,7 +403,7 @@ Image super resolution involves artificially increasing the resolution of an ima
 <span class="pub-meta">2020 · DOE White Paper</span>
 </summary>
 <div class="pub-details">
-<p>abstract goes here</p>
+<br/>
 <a class="pub-doi" href="https://www.ai4esp.org/files/AI4ESP1048_Geiss_Andrew.pdf" rel="noopener noreferrer" target="_blank">Link: White Paper</a>
 </div>
 </details>
@@ -268,7 +417,7 @@ Image super resolution involves artificially increasing the resolution of an ima
 <span class="pub-meta">2021 · Bulletin of the American Meteorological Society</span>
 </summary>
 <div class="pub-details">
-<p>abstract goes here</p>
+<br/>
 <a class="pub-doi" href="https://journals.ametsoc.org/view/journals/bams/102/2/bams.102.issue-2.xml" rel="noopener noreferrer" target="_blank">Link: Publication</a>
 </div>
 </details>
@@ -282,7 +431,7 @@ Image super resolution involves artificially increasing the resolution of an ima
 <span class="pub-meta">2020 · PhD Thesis</span>
 </summary>
 <div class="pub-details">
-<p>abstract goes here</p>
+<p>Clouds play a significant role in the Earth’s climate, yet cloud feedbacks remain one of the largest sources of inter-model spread in climate predictions. Studying how clouds respond to internal modes of climate variability can improve our understanding of how cloud varies on monthly to inter-annual time scales, improve our understanding of how clouds and cloud feedbacks might respond in a changing climate, and provide a validation metric for climate models. This study uses several satellite cloud datasets to identify interactions between cloud occurrence and various modes of climate variability in the historical record using a combination of linear regression and cluster analysis, including an in-depth examination of interactions between marine stratus cloud and wintertime sea surface temperature reemergence. These results are then used to evaluate cloud occurrence and monthly to annual cloud variability in historical simulations from several climate models. Implications for climate modeling are discussed. Finally, a new technique is developed to cluster unique meteorological and cloud regimes using a deep convolutional neural network.</p>
 <a class="pub-doi" href="https://digital.lib.washington.edu/researchworks/handle/1773/45828" rel="noopener noreferrer" target="_blank">Link: Thesis</a>
 </div>
 </details>
@@ -296,7 +445,7 @@ Image super resolution involves artificially increasing the resolution of an ima
 <span class="pub-meta">2016 · M.S. Thesis</span>
 </summary>
 <div class="pub-details">
-<p>abstract goes here</p>
+<p>Examination of cloud fraction and top of atmosphere radiation data from NASA’s MISR, MODIS, and CERES instruments reveals a pervasive temporal decline in optically thick cloud over the extratropical ocean basins during the period 2000 to 2015, which is compensated by a corresponding increase in cloud of moderate optical depth. While cloud optical depth has changed in these regions, no significant trend in total cloud fraction or large scale area-averaged albedo over the world's oceans has been observed by these instruments during this period. Likewise, no significant poleward shift in cloud associated with the extratropical storm tracks has been observed during this period. These changes in cloud fraction have had an observable effect on albedo at regional scales and comparison to ECMWF reanalysis data and NOAA CPC climate indices indicates that they are the result of intra-decadal to decadal scale synoptic variability, which may be natural climate variability.</p>
 <a class="pub-doi" href="http://hdl.handle.net/1773/36487" rel="noopener noreferrer" target="_blank">Link: Thesis</a>
 </div>
 </details>
@@ -417,7 +566,6 @@ BS Atmospheric Sciences, Atmospheric Chemistry - University of Washington (2012)
     <a href="#publications">Publications</a>
     <a href="#conferences">Conferences</a>
     <a href="#education">CV</a>
-    <a href="https://github.com/avgeiss" target="_blank" rel="noopener noreferrer">GitHub</a>
   </nav>
   <p class="footer-copy">&copy; 2026 Andrew Geiss &nbsp;&middot;&nbsp; Last updated March 2026</p>
 </footer>
